@@ -18,7 +18,15 @@
     <main>
         <p>Hello from Flask!</p>
         <p>Visit the <a href="https://www.hwr-berlin.de" target="_blank">HWR Berlin homepage</a>.</p>
-        <img src="{{ url_for('static', filename='images/grampians1.JPG') }}" alt="Grampians" style="max-width:100%;">
+        <p>I have been seen {{ count }} times.</p>
+        <ul>
+            {% for i in range(1, count+1) %}
+            <li>{{ i }}: Hello {{ name }}! </li>
+            {% endfor %}
+        </ul>
+        <img src="{{ url_for('static', filename='images/grampians1.JPG') }}" alt="Grampians" style="max-width: 100%; height: auto; border-radius: 8px;">
+
+        
     </main>
 
     <footer>
