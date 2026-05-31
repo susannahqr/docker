@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My first dynamic Website</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
-
 <body>
-    <main>
-        <h1>I have been seen {{ count }} times.</h1>
-        <ul>
-            {% for i in range(1, count+1) %}
-            <li>{{ i }}: Hello {{ name }}! </li>
-            {% endfor %}
-        </ul>
-    </main>
-</body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/titanic">Titanic</a>
+            <a href="https://github.com/susannahqr" target="_blank">About</a>
+        </nav>
+        <h1>Welcome</h1>
+    </header>
 
+    <main>
+        <p>Hello from Flask!</p>
+        <p>Visit the <a href="https://www.hwr-berlin.de" target="_blank">HWR Berlin homepage</a>.</p>
+        <img src="{{ url_for('static', filename='images/grampians1.JPG') }}" alt="Grampians" style="max-width:100%;">
+    </main>
+
+    <footer>
+        <p>Susanna</p>
+    </footer>
+</body>
 </html>
